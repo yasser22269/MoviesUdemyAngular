@@ -1,3 +1,4 @@
+import { MovieComponent } from './pages/movie/movie.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,9 +13,13 @@ import { SliderComponent } from './component/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ItemsBannerComponent } from './component/items-banner/items-banner.component';
 import { ItemComponent } from './component/item/item.component';
-//import {PaginatorModule} from 'primeng-lts/paginator';
-//import {AccordionModule} from 'primeng-lts/accordion';     //accordion and accordion tab
-//import { DragDropModule } from '@angular/cdk/drag-drop';
+import {PaginatorModule} from 'primeng/paginator';
+import {TabViewModule} from 'primeng/tabview';
+import { VideoEmbedComponent } from './component/video-embed/video-embed.component';
+import { ImageModule } from 'primeng/image';
+import { CarouselModule } from 'primeng/carousel';
+import { GenresComponent } from './pages/genres/genres.component';
+import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,14 +30,20 @@ import { ItemComponent } from './component/item/item.component';
     SliderComponent,
     ItemsBannerComponent,
     ItemComponent,
+    MovieComponent,
+    VideoEmbedComponent,
+    GenresComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   // DragDropModule,
-    //   PaginatorModule,AccordionModule
+    PaginatorModule,
+    TabViewModule,
+    ImageModule,
+    CarouselModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
